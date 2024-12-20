@@ -75,9 +75,9 @@ public class userSignupPage extends BaseClass {
 	@FindBy(xpath ="//input[@data-qa='zipcode']")
 	WebElement Zipcode;
 	
-	public void newUserSignUp() {
+	public void newUserSignUp() throws InterruptedException {
 		Name.sendKeys("Vikas");
-		Email.sendKeys("vikas.singh16477@gmail.com");
+		Email.sendKeys("vikas.singh@gmail.com");
 		SignUpBtn.click();
 		String Currenturl = driver.getCurrentUrl();
 		Assert.assertEquals(Currenturl, "https://automationexercise.com/signup", "Incorrect Url");
@@ -108,18 +108,15 @@ public class userSignupPage extends BaseClass {
 		Firstname.sendKeys("Vikas1");
 		Lastname.sendKeys("Redhu");
 		Address.sendKeys("Jind");
-		js.executeScript("window.scrollBy(0,1000)");
+		js.executeScript("window.scrollBy(0,2000)");
 		State.sendKeys("Haryana");
 		City.sendKeys("Hissar");
 		Zipcode.sendKeys("123321");
 		MobileNbr.sendKeys("2323232323");
+		Thread.sleep(20);
 		CreateAcccount.click();
-		
-		
-		
-		
-		
-		
+		//driver.close();
+			
 		
 	}
 	

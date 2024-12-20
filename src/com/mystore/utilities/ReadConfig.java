@@ -36,5 +36,21 @@ public class ReadConfig {
 		String value = properties.getProperty("browser");
 			return value;
 	}
+	
+	public String getUserName() {
+		
+		String value = properties.getProperty("username");
+		return value;
+		
+	}
  
+public String getUserPassword() {
+		
+		String value = properties.getProperty("password");
+		return value;
+		
+	}
+	
+	
+	
 }
